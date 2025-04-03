@@ -22,6 +22,9 @@ ORM 직접 작성 <----> SQL
     - 번개 표시 : 전체 실행 / 번개표시 1 : 1문장만 실행 -> create new schema (mydb) >> 우클릭 후 refresh all 
 
 ## 기본 설정 
+- .gitignore 설정
+- requirements 설정 : `pip freeze >> requireements.txt`
+
 - 가상환경 생성 , 활성화
 - `pip install django faker` : 장고, faker 같이 설치
 - project : sql_orm / app : movies >> `settings.py` app 등록
@@ -81,6 +84,9 @@ def serch(request):
     - 가?? : 가로 시작하는 세글자 단어 검색
 
 - orm에서는 `정규 표현식` 사용 : 이메일, 전화번호 정규화 시
+
+
+
 
 
 

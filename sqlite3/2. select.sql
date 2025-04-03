@@ -41,7 +41,7 @@ SELECT title, MIN(year) FROM movies_movie;
 
 -- 관객의 평균 나이 구하기
 -- User.objects.aggregate(Avg('year'))
-SELECT title, AVG(year) FROM movies_user;
+SELECT AVG(year) FROM movies_user;
 
 -- ## 1번 영화의 평균 평점 
 -- Score.objects.filter(movie_id=1).aggregate(Max('value'), Avg('value'))
@@ -73,7 +73,7 @@ WHERE title LIKE '%on.';  -- on.으로 끝나는 영화 검색
 SELECT * FROM movies_movie
 WHERE title LIKE '%g__d%'; --g로 시작하면서 d로 끝나는 4글자 영화 검색
 
--- ## 중복 제거 : DISTINCT
+-- ## 중복 제거 : DISTINCT 기준 
 -- User.objects.values('country').distinct().count()
 SELECT COUNT(DISTINCT country) FROM movies_user;
 
