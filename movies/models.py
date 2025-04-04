@@ -5,11 +5,13 @@ from django.db import models
 class Actor(models.Model):      
     name = models.CharField(max_length=500)
     age = models.IntegerField()
+    # movie_set --> movies로 바뀜
 
 class Movie(models.Model): 
     title = models.CharField(max_length=500)
     year = models.IntegerField()
     actors = models.ManyToManyField(Actor, related_name='movies')   # 영화와 영화배우를 M:N으로 연결 (한명의 배우가 여러 영화에 출연)
+    # category_set --> categories로 바뀜
 
 class Category(models.Model):
     name = models.CharField(max_length=500)
@@ -20,6 +22,7 @@ class User(models.Model):
     country = models.CharField(max_length=500)
     email = models.CharField(max_length=500)
     age = models.IntegerField()
+    # score_set
 
 class Score(models.Model):                                     # 영화, 유저와 점수는 1:n으로 연결
     content = models.CharField(max_length=500)
